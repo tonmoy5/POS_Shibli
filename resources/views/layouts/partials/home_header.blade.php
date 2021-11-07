@@ -13,13 +13,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         @if(Auth::check())
-            <li><a href="{{ action('HomeController@index') }}">@lang('home.home')</a></li>
+        <li><a href="{{ action('HomeController@index') }}">@lang('home.home')</a></li>
         @endif
-        @if(Route::has('frontend-pages') && config('app.env') != 'demo' 
+        @if(Route::has('frontend-pages') && config('app.env') != 'demo'
         && !empty($frontend_pages))
-            @foreach($frontend_pages as $page)
-                <li><a href="{{ action('\Modules\Superadmin\Http\Controllers\PageController@showPage', $page->slug) }}">{{$page->title}}</a></li>
-            @endforeach
+        @foreach($frontend_pages as $page)
+        <li><a href="{{ action('\Modules\Superadmin\Http\Controllers\PageController@showPage', $page->slug) }}">{{$page->title}}</a></li>
+        @endforeach
         @endif
         @if(Route::has('pricing') && config('app.env') != 'demo')
         <li><a href="{{ action('\Modules\Superadmin\Http\Controllers\PricingController@index') }}">@lang('superadmin::lang.pricing')</a></li>
@@ -34,12 +34,12 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         @if (Route::has('login'))
-            @if(!Auth::check())
-                <li><a href="{{ route('login') }}">@lang('lang_v1.login')</a></li>
-                @if(config('constants.allow_registration'))
-                    <li><a href="{{ route('business.getRegister') }}">@lang('lang_v1.register')</a></li>
-                @endif
-            @endif
+        @if(!Auth::check())
+        <li><a href="{{ route('login') }}">@lang('lang_v1.login')</a></li>
+        @if(config('constants.allow_registration'))
+        <li><a href="{{ route('business.getRegister') }}">@lang('lang_v1.register')</a></li>
+        @endif
+        @endif
         @endif
       </ul>
     </div><!-- nav-collapse -->
