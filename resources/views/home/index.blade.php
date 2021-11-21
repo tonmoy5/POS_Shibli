@@ -280,7 +280,7 @@
   </div> -->
   @endif
   @if(!empty($common_settings['enable_purchase_order']) && (auth()->user()->can('purchase_order.view_all') || auth()->user()->can('purchase_order.view_own')) )
-  <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
+  <!-- <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
     <div class="col-sm-12">
       @component('components.widget', ['class' => 'box-warning'])
       @slot('icon')
@@ -307,7 +307,7 @@
       </div>
       @endcomponent
     </div>
-  </div>
+  </div> -->
   @endif
 
   @if(auth()->user()->can('access_pending_shipments_only') || auth()->user()->can('access_shipping') || auth()->user()->can('access_own_shipping') )
