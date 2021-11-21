@@ -13,7 +13,7 @@
     {!! Form::open(['action' => '\Modules\Essentials\Http\Controllers\EssentialsSettingsController@update', 'method' => 'post', 'id' => 'essentials_settings_form']) !!}
     <div class="row">
         <div class="col-xs-12">
-           <!--  <pos-tab-container> -->
+            <!--  <pos-tab-container> -->
             <div class="col-xs-12 pos-tab-container">
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 pos-tab-menu">
                     <div class="list-group">
@@ -21,7 +21,7 @@
                         <a href="#" class="list-group-item text-center">@lang('essentials::lang.payroll')</a>
                         <a href="#" class="list-group-item text-center">@lang('essentials::lang.attendance')</a>
                         <a href="#" class="list-group-item text-center">@lang('essentials::lang.essentials')</a>
-                        
+
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 pos-tab">
@@ -44,7 +44,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="form-group pull-right">
-            {{Form::submit(__('messages.update'), ['class'=>"btn btn-danger"])}}
+                {{Form::submit(__('messages.update'), ['class'=>"btn btn-danger"])}}
             </div>
         </div>
     </div>
@@ -53,12 +53,12 @@
 @stop
 @section('javascript')
 <script type="text/javascript">
-    $(document).ready( function () {
+    $(document).ready(function() {
         tinymce.init({
             selector: 'textarea#leave_instructions',
         });
 
-        $('#essentials_settings_form').validate({ 
+        $('#essentials_settings_form').validate({
             ignore: [],
         });
     });

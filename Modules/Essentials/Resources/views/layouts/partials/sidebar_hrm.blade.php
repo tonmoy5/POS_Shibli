@@ -10,12 +10,12 @@
 
     <ul class="treeview-menu">
         @can('add_essentials_leave_type')
-            <li class="{{ $request->segment(2) == 'leave-type' ? 'active active-sub' : '' }}">
-                <a href="{{action('\Modules\Essentials\Http\Controllers\EssentialsLeaveTypeController@index')}}">
-                    <i class="fa fa-star"></i>
-                    <span class="title">@lang('essentials::lang.leave_type')</span>
-                </a>
-            </li>
+        <li class="{{ $request->segment(2) == 'leave-type' ? 'active active-sub' : '' }}">
+            <a href="{{action('\Modules\Essentials\Http\Controllers\EssentialsLeaveTypeController@index')}}">
+                <i class="fa fa-star"></i>
+                <span class="title">@lang('essentials::lang.leave_type')</span>
+            </a>
+        </li>
         @endcan
         <li class="{{ $request->segment(2) == 'leave' ? 'active active-sub' : '' }}">
             <a href="{{action('\Modules\Essentials\Http\Controllers\EssentialsLeaveController@index')}}">
@@ -51,12 +51,12 @@
             </a>
         </li>
         @can('edit_essentials_settings')
-            <li class="{{ $request->segment(2) == 'settings' ? 'active active-sub' : '' }}">
-                <a href="{{action('\Modules\Essentials\Http\Controllers\EssentialsSettingsController@edit')}}">
-                    <i class="fa fa-cogs"></i>
-                    <span class="title">@lang('business.settings')</span>
-                </a>
-            </li>
+        <li class="{{ $request->segment(2) == 'settings' ? 'active active-sub' : '' }}">
+            <a href="{{action('\Modules\Essentials\Http\Controllers\EssentialsSettingsController@edit')}}">
+                <i class="fa fa-cogs"></i>
+                <span class="title">@lang('business.settings')</span>
+            </a>
+        </li>
         @endcan
     </ul>
 </li>

@@ -15,12 +15,12 @@
                 <span class="title">@lang('essentials::lang.todo')</span>
             </a>
         </li>
-		<li class="{{ ($request->segment(2) == 'document' && $request->get('type') != 'memos') ? 'active active-sub' : '' }}">
-				<a href="{{action('\Modules\Essentials\Http\Controllers\DocumentController@index')}}">
-				<i class="fa fa-file"></i>
-				<span class="title"> @lang('essentials::lang.document') </span>
-			</a>
-		</li>
+        <li class="{{ ($request->segment(2) == 'document' && $request->get('type') != 'memos') ? 'active active-sub' : '' }}">
+            <a href="{{action('\Modules\Essentials\Http\Controllers\DocumentController@index')}}">
+                <i class="fa fa-file"></i>
+                <span class="title"> @lang('essentials::lang.document') </span>
+            </a>
+        </li>
         <li class="{{ ($request->segment(2) == 'document' && $request->get('type') == 'memos') ? 'active active-sub' : '' }}">
             <a href="{{action('\Modules\Essentials\Http\Controllers\DocumentController@index') .'?type=memos'}}">
                 <i class="fa fa-envelope-open"></i>
@@ -48,12 +48,12 @@
         </li>
         @endif
         @can('edit_essentials_settings')
-            <li class="{{ $request->segment(2) == 'settings' ? 'active active-sub' : '' }}">
-                <a href="{{action('\Modules\Essentials\Http\Controllers\EssentialsSettingsController@edit')}}">
-                    <i class="fa fa-cogs"></i>
-                    <span class="title">@lang('business.settings')</span>
-                </a>
-            </li>
+        <li class="{{ $request->segment(2) == 'settings' ? 'active active-sub' : '' }}">
+            <a href="{{action('\Modules\Essentials\Http\Controllers\EssentialsSettingsController@edit')}}">
+                <i class="fa fa-cogs"></i>
+                <span class="title">@lang('business.settings')</span>
+            </a>
+        </li>
         @endcan
     </ul>
 </li>
