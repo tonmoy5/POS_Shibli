@@ -4,7 +4,7 @@
 @section('content')
 
 <!-- Content Header (Page header) -->
-<section class="content-header content-header-custom" style="background-color: #444;">
+<section class="content-header content-header-custom">
   <h1>{{ __('home.welcome_message', ['name' => Session::get('user.first_name')]) }}
   </h1>
 </section>
@@ -280,7 +280,7 @@
   </div> -->
   @endif
   @if(!empty($common_settings['enable_purchase_order']) && (auth()->user()->can('purchase_order.view_all') || auth()->user()->can('purchase_order.view_own')) )
-  <!-- <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
+  <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
     <div class="col-sm-12">
       @component('components.widget', ['class' => 'box-warning'])
       @slot('icon')
@@ -307,10 +307,10 @@
       </div>
       @endcomponent
     </div>
-  </div> -->
+  </div>
   @endif
 
-  @if(auth()->user()->can('access_pending_shipments_only') || auth()->user()->can('access_shipping') || auth()->user()->can('access_own_shipping') )
+  <!-- @if(auth()->user()->can('access_pending_shipments_only') || auth()->user()->can('access_shipping') || auth()->user()->can('access_own_shipping') )
   @component('components.widget', ['class' => 'box-warning'])
   @slot('icon')
   <i class="fas fa-list-alt text-yellow fa-lg" aria-hidden="true"></i>
@@ -360,8 +360,8 @@
       </thead>
     </table>
   </div>
+  @endif -->
   @endcomponent
-  @endif
 
   @if(!empty($widgets['after_dashboard_reports']))
   @foreach($widgets['after_dashboard_reports'] as $widget)
