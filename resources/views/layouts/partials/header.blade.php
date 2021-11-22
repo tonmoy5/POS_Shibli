@@ -16,7 +16,7 @@
     </a>
 
     @if(Module::has('Superadmin'))
-    @includeIf('superadmin::layouts.partials.active_subscription')
+    <!-- @includeIf('superadmin::layouts.partials.active_subscription') -->
     @endif
 
     <!-- Navbar Right Menu -->
