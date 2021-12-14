@@ -27,9 +27,11 @@
       @endif
 
       <div class="btn-group">
-        <button id="header_shortcut_dropdown" type="button" class="btn btn-success dropdown-toggle btn-flat pull-left m-8 btn-sm mt-10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+        <!-- <button id="header_shortcut_dropdown" type="button" class="btn btn-success dropdown-toggle btn-flat pull-left m-8 btn-sm mt-10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-plus-circle fa-lg"></i>
-        </button>
+        </button> -->
+
         <ul class="dropdown-menu">
           @if(config('app.env') != 'demo')
           <li><a href="{{route('calendar')}}">
