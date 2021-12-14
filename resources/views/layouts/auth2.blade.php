@@ -21,13 +21,13 @@
     <![endif]-->
 </head>
 
-<body>
+<body style="min-height: 100vh;">
     @inject('request', 'Illuminate\Http\Request')
     @if (session('status'))
     <input type="hidden" id="status_span" data-status="{{ session('status.success') }}" data-msg="{{ session('status.msg') }}">
     @endif
-    <div class="container-fluid">
-        <div class="row eq-height-row" style="background-color: #243949; justify-content: center;">
+    <div class="container-fluid" style="min-height: 100vh;">
+        <div class="row eq-height-row" style="background-color: #243949; justify-content: center; align-items: center; min-height: 100vh; ">
             <!-- <div class="col-md-5 col-sm-5 hidden-xs left-col eq-height-col">
                         <div class="left-col-content login-header">
                             <div style="margin-top: 50%;">
@@ -45,9 +45,9 @@
                             </div>
                         </div>
                     </div> -->
-            <div class="col-md-7 col-sm-12 col-xs-12 right-col eq-height-col">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="">
                 <div class="row">
-                    <div class="col-md-3 col-xs-4" style="text-align: left;">
+                    <div class="col-md-12 col-xs-12" style="text-align: center;">
 
 
                         <!-- <select class="form-control input-sm" id="change_lang" style="margin: 10px;">
