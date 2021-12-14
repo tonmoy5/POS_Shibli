@@ -55,12 +55,18 @@
       <!-- <button id="btnCalculator" title="@lang('lang_v1.calculator')" type="button" class="btn btn-success btn-flat pull-left m-8 btn-sm mt-10 popover-default hidden-xs" data-toggle="popover" data-trigger="click" data-content='@include("layouts.partials.calculator")' data-html="true" data-placement="bottom">
         <strong><i class="fa fa-calculator fa-lg" aria-hidden="true"></i></strong>
       </button> -->
+      <a href="http://localhost/pharmacy/public/reports/stock-expiry">
+        <button type="button" class="btn btn-success btn-flat pull-left m-8 btn-sm mt-10 popover-default hidden-xs" data-toggle="popover" data-trigger="click" data-content='@include("layouts.partials.calculator")' data-html="true" data-placement="bottom">
+          <strong>Expired</strong>
+        </button>
+      </a>
 
       <a href="http://localhost/pharmacy/public/purchases/create">
         <button type="button" class="btn btn-success btn-flat pull-left m-8 btn-sm mt-10 popover-default hidden-xs" data-toggle="popover" data-trigger="click" data-content='@include("layouts.partials.calculator")' data-html="true" data-placement="bottom">
           <strong>Purchase</strong>
         </button>
       </a>
+
 
       @if($request->segment(1) == 'pos')
       @can('view_cash_register')
