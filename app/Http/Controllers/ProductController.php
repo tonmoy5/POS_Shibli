@@ -1241,7 +1241,7 @@ class ProductController extends Controller
     public function checkProductSku(Request $request)
     {
         $business_id = $request->session()->get('user.business_id');
-        $sku = $request->input('sku');
+        $sku = "***";
         $product_id = $request->input('product_id');
 
         //check in products table
