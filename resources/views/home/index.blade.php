@@ -155,7 +155,7 @@
   @endforeach
   @endif
   <!-- products less than alert quntity -->
-  <div class="row">
+  <div class="row" style="display: none;">
     @if(auth()->user()->can('sell.view') || auth()->user()->can('direct_sell.view'))
     <div class="col-sm-6">
       @component('components.widget', ['class' => 'box-warning'])
