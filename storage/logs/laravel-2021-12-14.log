@@ -1,0 +1,2 @@
+[2021-12-14 11:28:40] live.EMERGENCY: File:C:\xampp\htdocs\pharmacy\app\Http\Controllers\ImportProductsController.phpLine:583Message:Unit with name pice not found in row no. 1. You can add unit from Products > Units  
+[2021-12-14 11:32:57] live.EMERGENCY: File:C:\xampp\htdocs\pharmacy\app\Http\Controllers\ImportProductsController.phpLine:583Message:PURCHASE PRICE is required in row no. 1  
