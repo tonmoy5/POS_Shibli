@@ -22,7 +22,7 @@ return [
     'unit' => 'Unit',
     'brand' => 'Brand',
     'tax' => 'Tax',
-    'sku' => 'SKU',
+    'sku' => 'Generic',
     'alert_quantity' => 'Alert quantity',
     'product_name' => 'Product Name',
     'auto_generate' => 'Auto generate',
@@ -58,4 +58,4 @@ return [
     'import_products' => 'Import Products',
     'file_to_import' => 'File To Import',
     'file_imported_successfully' => 'File imported successfully'
- ];
+];
