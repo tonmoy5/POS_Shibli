@@ -9,28 +9,28 @@
           <th>@lang('lang_v1.position')</th>
         </tr>
         @if(!empty($details[0]))
-          @foreach( $details as $detail )
-            <tr>
-              <td>{{ $detail->name}}</td>
-              <td>
-                {{ $detail->rack }}
-              </td>
-              <td>
-                {{ $detail->row }}
-              </td>
-              <td>
-                {{ $detail->position }}
-              </td>
-            </tr>
-          @endforeach
+        @foreach( $details as $detail )
+        <tr>
+          <td>{{ $detail->name}}</td>
+          <td>
+            {{ $detail->rack }}
+          </td>
+          <td>
+            {{ $detail->row }}
+          </td>
+          <td>
+            {{ $detail->position }}
+          </td>
+        </tr>
+        @endforeach
         @else
-          <tr>
-            <td colspan="4" class="text-center">
-              -
-            </td>
-          </tr>
+        <tr>
+          <td colspan="4" class="text-center">
+            -
+          </td>
+        </tr>
         @endif
-        
+
       </table>
     </div>
   </div>
