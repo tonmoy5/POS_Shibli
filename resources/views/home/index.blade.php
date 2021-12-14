@@ -179,7 +179,7 @@
     </div>
     @endif
     @can('purchase.view')
-    <div class="col-sm-6">
+    <div class="col-sm-6" style="display: none;">
       @component('components.widget', ['class' => 'box-warning'])
       @slot('icon')
       <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
@@ -247,8 +247,8 @@
     @endif
   </div>
   @endcan
-  @if(auth()->user()->can('so.view_all') || auth()->user()->can('so.view_own'))
-  <!-- <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
+  <!--@if(auth()->user()->can('so.view_all') || auth()->user()->can('so.view_own'))
+   <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
     <div class="col-sm-12">
       @component('components.widget', ['class' => 'box-warning'])
       @slot('icon')
@@ -277,8 +277,8 @@
       </div>
       @endcomponent
     </div>
-  </div> -->
-  @endif
+  </div> 
+  @endif-->
   @if(!empty($common_settings['enable_purchase_order']) && (auth()->user()->can('purchase_order.view_all') || auth()->user()->can('purchase_order.view_own')) )
   <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
     <div class="col-sm-12">
@@ -360,9 +360,9 @@
       </thead>
     </table>
   </div>
-  @endif -->
+-->
+  @endif
   @endcomponent
-
   @if(!empty($widgets['after_dashboard_reports']))
   @foreach($widgets['after_dashboard_reports'] as $widget)
   {!! $widget !!}
