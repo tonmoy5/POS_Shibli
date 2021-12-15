@@ -52,7 +52,7 @@
 
 					</span>
 				</td>
-				<td class="@if($pos_settings['disable_discount'] != 0) hide @endif">
+				<td class="@if($pos_settings['disable_discount'] != 0) hide @endif" style="display: none;">
 					<span>
 
 						<b>@lang('sale.shipping')(+): @show_tooltip(__('tooltip.shipping'))</b>
