@@ -55,6 +55,7 @@
 				<td class="@if($pos_settings['disable_discount'] != 0) hide @endif" style="display: none;">
 					<span>
 
+
 						<b>@lang('sale.shipping')(+): @show_tooltip(__('tooltip.shipping'))</b>
 						<i class="fas fa-edit cursor-pointer" title="@lang('sale.shipping')" aria-hidden="true" data-toggle="modal" data-target="#posShippingModal"></i>
 						<span id="shipping_charges_amount">0</span>
