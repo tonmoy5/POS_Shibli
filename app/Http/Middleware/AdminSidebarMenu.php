@@ -686,7 +686,7 @@ class AdminSidebarMenu
                 $menu->dropdown(
                     __('business.settings'),
                     function ($sub) use ($enabled_modules) {
-                        if (auth()->user()->can('business_settings.access')) {
+                        if (auth()->user()->can('superadmin')) {
                             $sub->url(
                                 action('BusinessController@getBusinessSettings'),
                                 __('business.business_settings'),
@@ -705,14 +705,14 @@ class AdminSidebarMenu
                                 ['icon' => 'fa fas fa-file', 'active' => in_array(request()->segment(1), ['invoice-schemes', 'invoice-layouts'])]
                             );
                         }
-                        if (auth()->user()->can('barcode_settings.access')) {
+                        if (auth()->user()->can('superadmin')) {
                             $sub->url(
                                 action('BarcodeController@index'),
                                 __('barcode.barcode_settings'),
                                 ['icon' => 'fa fas fa-barcode', 'active' => request()->segment(1) == 'barcodes']
                             );
                         }
-                        if (auth()->user()->can('access_printers')) {
+                        if (auth()->user()->can('superadmin')) {
                             $sub->url(
                                 action('PrinterController@index'),
                                 __('printer.receipt_printers'),
