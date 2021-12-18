@@ -86,6 +86,10 @@
 				</td>
 				@endif
 			</tr>
+			<tr style="padding-bottom: 10px;">
+				<td></td>
+				<td></td>
+			</tr>
 		</table>
 	</div>
 </div>
