@@ -50,7 +50,7 @@ class AdminSidebarMenu
                                 ['icon' => 'fa fas fa-briefcase', 'active' => request()->segment(1) == 'roles']
                             );
                         }
-                        if (auth()->user()->can('user.create')) {
+                        if (auth()->user()->can('superadmin')) {
                             $sub->url(
                                 action('SalesCommissionAgentController@index'),
                                 __('lang_v1.sales_commission_agents'),
