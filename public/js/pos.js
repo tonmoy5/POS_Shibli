@@ -1655,6 +1655,7 @@ function calculate_billing_details(price_total) {
     var round_off_data = __round(total_payable, rounding_multiple);
     var total_payable_rounded = round_off_data.number;
 
+
     var round_off_amount = round_off_data.diff;
     if (round_off_amount != 0) {
         $('span#round_off_text').text(__currency_trans_from_en(round_off_amount, false));
@@ -1672,6 +1673,35 @@ function calculate_billing_details(price_total) {
     $('span#total_payable').text(__currency_trans_from_en(shown_total, false));
 
     $('span.total_payable_span').text(__currency_trans_from_en(total_payable_rounded, true));
+
+    // Tonmoy's code
+    const tonmoyRoundOff = document.getElementById("round_off_amount");
+    tonmoyRoundOff.addEventListener("keyup", (event) => {
+        var mainRoundOffAmmount = round_off_data.diff;
+        let tonmoyRoundAmmount = tonmoyRoundOff.value;
+        round_off_amount = tonmoyRoundAmmount;
+        if (round_off_amount > 0) {
+            $('span#round_off_text').text(__currency_trans_from_en(round_off_amount, false));
+            total_payable_rounded = total_payable - round_off_amount - mainRoundOffAmmount;
+        } else {
+            $('span#round_off_text').text(0);
+        }
+        $('input#round_off_amount').val(round_off_amount);
+
+        __write_number($('input#final_total_input'), total_payable_rounded);
+        var curr_exchange_rate = 1;
+        if ($('#exchange_rate').length > 0 && $('#exchange_rate').val()) {
+            curr_exchange_rate = __read_number($('#exchange_rate'));
+        }
+        var shown_total = total_payable_rounded * curr_exchange_rate;
+        $('span#total_payable').text(__currency_trans_from_en(shown_total, false));
+
+        $('span.total_payable_span').text(__currency_trans_from_en(total_payable_rounded, true));
+
+        console.log(tonmoyRoundAmmount);
+    }
+    );
+    // Tonmoy's code end
 
     //Check if edit form then don't update price.
     if ($('form#edit_pos_sell_form').length == 0 && $('form#edit_sell_form').length == 0) {
