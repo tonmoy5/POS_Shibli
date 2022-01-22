@@ -10,3 +10,9 @@
     <b>POS For Mr. Shibli | Developed by <a href="http://tonmoy.itstorm.us" target="_blanck">Md Tonmoy</a></b>
   </small>
 </footer>
+<script>
+  function pname() {
+    console.log("first");
+
+  }
+</script>

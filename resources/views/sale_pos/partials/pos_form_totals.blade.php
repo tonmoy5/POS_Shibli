@@ -21,7 +21,8 @@
 						{{session('business.rp_name')}}
 						@endif
 						(-):
-						<i class="fas fa-edit cursor-pointer" id="pos-edit-discount" title="@lang('sale.edit_discount')" aria-hidden="true" data-toggle="modal" data-target="#posEditDiscountModal"></i>
+						<i class="fas fa-edit cursor-pointer" id="pos-edit-discount" title="@lang('sale.edit_discount')" aria-hidden="true" data-toggle="modal" data-target="#posEditDiscountModal">
+						</i>
 						<span id="total_discount">0</span>
 						<input type="hidden" name="discount_type" id="discount_type" value="@if(empty($edit)){{'percentage'}}@else{{$transaction->discount_type}}@endif" data-default="percentage">
 
@@ -82,7 +83,7 @@
 				@if(!empty($pos_settings['amount_rounding_method']) && $pos_settings['amount_rounding_method'] > 0)
 				<td>
 					<b id="round_off">@lang('lang_v1.round_off'):</b> <span id="round_off_text">0</span>
-					<input type="hidden" name="round_off_amount" id="round_off_amount" value=0>
+					<input onchange="pname()" type="text" name="round_off_amount" id="round_off_amount" value=0>
 				</td>
 				@endif
 			</tr>
