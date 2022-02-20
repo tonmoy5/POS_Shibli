@@ -11,8 +11,5 @@
   </small>
 </footer>
 <script>
-  function pname() {
-    console.log("first");
 
-  }
 </script>
